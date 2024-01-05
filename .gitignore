@@ -33,6 +33,9 @@ MANIFEST
 *.manifest
 *.spec
 
+# ignore ds_store
+.DS_Store
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
