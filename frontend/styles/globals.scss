@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Montserrat';font-size: 22px;
+}
+
+.linear-wipe {
+    text-align: center;
+    z-index: 40;
+    background: linear-gradient(
+      to right,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82,
+      #f79533
+    );
+    background-size: 200% auto;
+  
+    color: #000;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: shine 3s linear infinite;
+  }
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+  .w-192 {
+    width: 48rem;
+  }
+
+
+$primaryColor: #000000;
+$secondaryColor: #fff;
+$steps: 20;
+
+
+.glitch {
+    position: relative;
+    margin: 0 auto;
+    color: $primaryColor;
+    font-size: 58px;
+    line-height: 40px;
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    transform: scale3d(1,1,1);
+   
+
+    &::before,
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background: $secondaryColor;
+        color: $primaryColor;
+        clip: rect(0, 900px, 0, 0);
+
+    }
+
+    &::before {
+        left: 7px;
+        text-shadow: 1px 5 green;
+        animation: glitch-effect 5s infinite linear alternate-reverse;
+    }
+
+    &::after {
+        left: 3px;
+        text-shadow: -1px 0 red;
+        animation: glitch-effect 2s infinite linear alternate-reverse;
+    }
+}
+
+@keyframes glitch-effect{
+  
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps*4))}{
+            clip:rect(random(100)+px,9999px,random(100)+px,0);
+        }
+    }
+    
+}
+
+
+.bg_white {
+  background:#1d1d1f;
+}
+.bg_black {
+  background:#080808;
+}
+
+
+
+.container {
+  // set z-index to 1 to make sure the container is on top of the background
+  z-index: -2;
+}
+
+.changebg {
+  background:#080808;
+  animation: changebg 2s ease-in-out;
+  -webkit-animation: changebg 2s ease-in-out;
+  -moz-animation: changebg 2s ease-in-out;
+  -o-animation: changebg 2s ease-in-out;
+  -ms-animation: changebg 2s ease-in-out;}
+
+.wrapper.six{
+  background-color: #222222;
+}
+.flicker {
+  margin: 1rem auto;
+  color: #ffffff63;
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ffffff), color-stop(1, #ffffff)) no-repeat;
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, rgb(255, 255, 255))) no-repeat;
+  background-size: 110px 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: flick 5.5s infinite ease-in-out;
+}
+@keyframes flick {
+  0% {
+    background-position: top left;
+  }
+  50% {
+    background-position: top right;
+  }
+  100% {
+    background-position: top left;
+  }
+}
+
+.dumb {
+  background-color: #2196f3;
+  // animation-duration: 0.2s;
+  // animation-name: color-shake;
+  // animation-iteration-count: infinite;
+}
+
+.go_crazy {
+  background-color: #2196f3;
+  animation-duration: 0.6s;
+  animation-name: color-shake;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color-shake {
+  0% {
+    background-color: #2196f3;
+    transform: translate(0, 0) rotate(0);
+  }
+  10% {
+    background-color: #4caf50;
+    transform: translate(-5px, 0) rotate(-5deg);
+  }
+  20% {
+    background-color: #ffb1ac;
+    transform: translate(5px, 0) rotate(5deg);
+  }
+  30% {
+    background-color: #fff8b5;
+    transform: translate(-5px, 0) rotate(-5deg);
+  }
+  40% {
+    background-color: #a9f4ff;
+    transform: translate(5px, 0) rotate(5deg);
+  }
+  50% {
+    background-color: #fbaa99;
+    transform: translate(-5px, 0) rotate(-5deg);
+  }
+  60% {
+    background-color: #ff94b3;
+    transform: translate(5px, 0) rotate(5deg);
+  }
+  70% {
+    background-color: #f1a1ff;
+    transform: translate(-5px, 0) rotate(-5deg);
+  }
+  80% {
+    background-color: #aec9ff;
+    transform: translate(5px, 0) rotate(5deg);
+  }
+  90% {
+    background-color: #98fff1;
+    transform: translate(-5px, 0) rotate(-5deg);
+  }
+  100% {
+    background-color: #9effb7;
+    transform: translate(0, 0) rotate(0);
+  }
+}
+
+.search {
+  transition: all 0.3s ease-in-out;
+}
+
+.search:hover {
+  background-color: #ff7ba9;
+}
+
+/* Button click styles */
+.search:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Button click animation */
+@keyframes button-click {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.search:active {
+  animation-name: button-click;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+.bg_gradient_black {
+  background: linear-gradient(to top, #1c1c1c, #444444); /* Gradient from black to a darker gray */
+  color: white; /* Ensuring text or content on this background is readable */
+}
