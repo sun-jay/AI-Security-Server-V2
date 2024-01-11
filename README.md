@@ -21,6 +21,18 @@ In `/frontend` run:
 `yarn install`
 
 `yarn dev`
+## Tech Stack
+
+**Docker & FFMPEG**: containerized Security Camera NVR (Network Video Recorder)
+
+**PyTorch and Azure ML Studio Cloud GPUs**: fine tuning OpenAI’s CLIP model on a custom doorbell camera dataset
+
+**ChromaDB**: vector database for local embedding storage and vector similarity search
+
+**Python FastAPI**: backend server
+
+**NextJS, React, and TailWindCSS**: frontend interface
+
 
 ## About
 **Problem Statement**: Modern consumer security platforms such as Ring only offer rudimentary AI person detection, leaving anomaly filtering a mostly manual and time consuming task.
