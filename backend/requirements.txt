@@ -1,0 +1,9 @@
+chromadb==0.4.21
+docker_py==1.10.6
+fastapi==0.108.0
+opencv_python==4.8.1.78
+Pillow==10.0.0
+pydantic==1.10.13
+pytz==2023.3
+torch==2.0.1
+transformers==4.31.0

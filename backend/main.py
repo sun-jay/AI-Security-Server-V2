@@ -52,3 +52,5 @@ const response = await fetch('http://localhost:8000/get_video', {
 
 
 """
+
+# run using uvicorn main:app --reload
