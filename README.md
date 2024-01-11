@@ -6,22 +6,26 @@ https://github.com/sun-jay/AI-Security-Server-V2/assets/80140457/a63305c2-9e35-4
 
 
 ## Run Locally
-The project consists of 4 concurrent processes: record_streams.py, monitor_streams.py, Nextjs frontend, main.py (serves frontend). You will need to update the RTSP URL and file save paths for your setup. In `/backend` run:
+The project consists of 4 concurrent processes: record_streams.py, monitor_streams.py, Nextjs frontend, main.py (serves frontend). You will need to update the RTSP URL and file save paths for your setup. 
+
+In `/backend` run:
 
 `python3 record streams.py`
+
  `python3 monitor_streams.py`
+ 
  `uvicorn main:app --reload`
 
 In `/frontend` run:
 
 `yarn install`
+
 `yarn dev`
 
-Problem Statement: Modern consumer security platforms such as Ring only offer rudimentary AI person detection, leaving anomaly filtering a mostly manual and time consuming task.
-
 ## About
+**Problem Statement**: Modern consumer security platforms such as Ring only offer rudimentary AI person detection, leaving anomaly filtering a mostly manual and time consuming task.
 
-Vision Statement: The current state of computer vision allows for advanced natural language queries and highly efficient searching, which is not yet utilized on many platforms. I sought out to build an app that could leverage and build on new AI technologies to embark on the next step of AI powered security.
+**Vision Statement**: The current state of computer vision allows for advanced natural language queries and highly efficient searching, which is not yet utilized on many platforms. I sought out to build an app that could leverage and build on new AI technologies to embark on the next step of AI powered security.
 
   
   
